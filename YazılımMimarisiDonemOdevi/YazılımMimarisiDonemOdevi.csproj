@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{735BD9BB-089D-4C94-BB07-9AB75C59F783}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>YazılımMimarisiDonemOdevi</RootNamespace>
+    <AssemblyName>YazılımMimarisiDonemOdevi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel.Designer.cs">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AraPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AraPanel.Designer.cs">
+      <DependentUpon>AraPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BridgeHasta\arayüzhasta.cs" />
+    <Compile Include="BridgeHasta\arkaplanhasta.cs" />
+    <Compile Include="BridgeHasta\Colyakhastasi.cs" />
+    <Compile Include="BridgeHasta\sekerhastasi.cs" />
+    <Compile Include="BridgeHasta\obezhastası.cs" />
+    <Compile Include="BridgeHasta\Implementorhasta.cs" />
+    <Compile Include="BridgeTedavi\akdeniz.cs" />
+    <Compile Include="BridgeTedavi\arayüztedavi.cs" />
+    <Compile Include="BridgeTedavi\arkaplantedavi.cs" />
+    <Compile Include="BridgeTedavi\Ogunler.cs" />
+    <Compile Include="BridgeTedavi\Implementortedavi.cs" />
+    <Compile Include="BridgeTedavi\denizUrunleri.cs" />
+    <Compile Include="BridgeTedavi\glutenFree.cs" />
+    <Compile Include="BridgeTedavi\YesilliklerDunyasi.cs" />
+    <Compile Include="Builder\AnaRaporOlustur.cs" />
+    <Compile Include="Builder\Html.cs" />
+    <Compile Include="Builder\Json.cs" />
+    <Compile Include="Builder\ReportInfo.cs" />
+    <Compile Include="Builder\ReportManager.cs" />
+    <Compile Include="DAL\AccessCustomerManager.cs" />
+    <Compile Include="DAL\CustomerManager.cs" />
+    <Compile Include="DAL\ICustomerDAL.cs" />
+    <Compile Include="DiyetProgramDegistir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiyetProgramDegistir.Designer.cs">
+      <DependentUpon>DiyetProgramDegistir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="girisEkranı.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="girisEkranı.Designer.cs">
+      <DependentUpon>girisEkranı.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HastaBilgileri.cs" />
+    <Compile Include="HastaKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HastaKayit.Designer.cs">
+      <DependentUpon>HastaKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mimaridbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mimaridbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdminPanel.resx">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AraPanel.resx">
+      <DependentUpon>AraPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiyetProgramDegistir.resx">
+      <DependentUpon>DiyetProgramDegistir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="girisEkranı.resx">
+      <DependentUpon>girisEkranı.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HastaKayit.resx">
+      <DependentUpon>HastaKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="mimaridbDataSet.xsc">
+      <DependentUpon>mimaridbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="mimaridbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>mimaridbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mimaridbDataSet.xss">
+      <DependentUpon>mimaridbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="mimaridb.mdb" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
